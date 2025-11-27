@@ -1,0 +1,11 @@
+SELECT * FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" limit 10;
+
+SELECT * FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" where vehicletype = '32' and gantryid_o = '03F1860S'
+
+SELECT count(*) FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" where vehicletype = '32' and gantryid_o = '03F1860S'
+
+SELECT count(*) as VT FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" where gantryid_o = '03F1860S' group by "VehicleType"
+
+SELECT "VehicleType" as VT,  count(*) as cnt FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" where gantryid_o = '03F1860S' group by "VehicleType"
+
+SELECT "VehicleType" as VT,  count(*) as cnt FROM "jdwang-tdcs-db"."table_orginal_m06a_20231018_23" where gantryid_o = '03F1860S' group by "VehicleType" order by VT
